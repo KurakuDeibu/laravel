@@ -1,12 +1,12 @@
-<footer>
-    <div class="footer-content container">
-        <div class="made-with">@KURAKUDEIBU<i class="fa fa-heart heart"></i></div>
-        <ul>    
-            <li>Follow Me: </li>
-            <li><a href="https://www.facebook.com/hi.davix"><i class="fa fa-facebook"></i></a></li>
-            <li><a href="https://www.youtube.com/"><i class="fa fa-youtube"></i></a></li>
-            <li><a href="https://github.com/Kurakudaz"><i class="fa fa-github"></i></a></li>
-            <li><a href="https://twitter.com/"><i class="fa fa-instagram"></i></a></li>
-        </ul>
-    </div> <!-- end footer-content -->
-</footer>
+  <!-- FOOTER -->
+  <footer class="bg-light mt-5 py-4">
+    <div class="container text-center">
+      <p>© 2024 ThriftyTrade. All rights reserved.</p>
+      <p>
+        <a href="/terms" class="text-decoration-none me-2">Terms of Service</a>
+        <a href="/privacy" class="text-decoration-none me-2">Privacy Policy</a>
+        <a href="/contact" class="text-decoration-none">Contact Us</a>
+      </p>
+    </div>
+  </footer>
+  <!-- END OF FOOTER -->

@@ -1,53 +1,38 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
+
 
 Route::get('/', function () {
-    return view('index');
+    return view('landing-page');
 });
 
-Route::view('/chatui', 'chatui');
-Route::view('/newlisting', 'newlisting');
-// Route::view('/marketplace', 'marketplace');
-
-Route::view('/marketplace', 'marketplace');
-
-Route::get('/buyer_dashboard', function () {
-    return view('buyer_dashboard');
-});
-
-Route::get('/seller_dashboard', function () {
-    return view('seller_dashboard');
+Route::get('/marketplace', function () {
+    return view('marketplace-auth');
 });
 
 Route::get('/product-detail', function () {
-    return view('product-detail');
+    return view('product.product-detail');
 });
 
-Route::get('/product_details', function () {
-    return view('product_details');
+Route::get('/chatui', function () {
+    return view('chatui-noauth');
+});
+Route::get('/auth/chatui', function () {
+    return view('chatui-auth');
+});
+
+Route::get('/register', function () {
+    return view('auth.register');
+});
+
+Route::get('/login', function () {
+    return view('auth.login');
 });
 
 
-// Route::get('/product/{id}', function ($id) {
-//     // Fetch product details from database using $id and pass to the view
-//     return view('product-detail');
-// });
+Route::view('/newlisting', 'newlisting');
 
-Route::get('/newlisting', function () {
-    return view('newlisting');
-});
 
-Route::get('/single-listing', function () {
-    // Add logic for single listing page
-    return 'Single Listing Page';
-});
-
-Route::get('/commission-listing', function () {
-    // Add logic for commission listing page
-    return 'Commission Listing Page';
-});
-
-Route::view('/product-detail', 'product-detail');
-Route::view('/product', 'product');
-Route::view('/listing-type', 'listing-type');
+// Route::view('/newlisting', 'newlisting');

@@ -35,7 +35,7 @@
     </style>
 </head>
 <body>
-    @include('components.navbar-product')
+    @include('navbar.nav-auth')
 
     <div class="container mt-5">
         <div class="row">

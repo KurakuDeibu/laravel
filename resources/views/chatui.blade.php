@@ -1,17 +1,11 @@
 
 @extends('layouts.app')
 
+@include('navbar.nav-auth')
+
 @section('content')
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <!-- Google Fonts -->
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
-    </script>
 
 
     <!-- chat-area -->
@@ -128,7 +122,7 @@
                                                 <div class="d-flex align-items-center">
                                                     <span class="chat-icon"><img class="img-fluid"
                                                             src="https://mehedihtml.com/chatbox/assets/img/arroleftt.svg"
-                                                            alt="image title"></span>
+                                                            alt="image "></span>
                                                     <div class="flex-shrink-0">
                                                         <img class="img-fluid"
                                                             src="https://mehedihtml.com/chatbox/assets/img/user.png"
@@ -272,6 +266,7 @@
     <!-- chat-area -->
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 
     <style>
         /* **********************************
