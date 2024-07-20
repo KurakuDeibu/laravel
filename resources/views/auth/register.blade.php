@@ -1,47 +1,76 @@
-@extends('layouts.app')
-@section('title', 'Register')
-@section('content')
-    <div class="row justify-content-center">
-        <div class="col-12 col-sm-8 col-md-6">
-            <form class="form mt-5" action="{{ route('register') }}" method="post">
-                @csrf
-                <h3 class="text-center text-dark">Register</h3>
-                <div class="form-group">
-                    <label for="name" class="text-dark">Name:</label><br>
-                    <input type="text" name="name" id="name" class="form-control">
-                    @error('name')
-                        <span class="d-block fs-6 text-danger mt-2"> {{ $message }} </span>
-                    @enderror
-                </div>
-                <div class="form-group mt-3">
-                    <label for="email" class="text-dark">Email:</label><br>
-                    <input type="email" name="email" id="email" class="form-control">
-                    @error('email')
-                        <span class="d-block fs-6 text-danger mt-2"> {{ $message }} </span>
-                    @enderror
-                </div>
-                <div class="form-group mt-3">
-                    <label for="password" class="text-dark">Password:</label><br>
-                    <input type="password" name="password" id="password" class="form-control">
-                    @error('password')
-                        <span class="d-block fs-6 text-danger mt-2"> {{ $message }} </span>
-                    @enderror
-                </div>
-                <div class="form-group mt-3">
-                    <label for="confirm-password" class="text-dark">Confirm Password:</label><br>
-                    <input type="password" name="password_confirmation" id="confirm-password" class="form-control">
-                    @error('password_confirmation')
-                        <span class="d-block fs-6 text-danger mt-2"> {{ $message }} </span>
-                    @enderror
-                </div>
-                <div class="form-group">
-                    <label for="remember-me" class="text-dark"></label><br>
-                    <input type="submit" name="submit" class="btn btn-dark btn-md" value="submit">
-                </div>
-                <div class="text-right mt-2">
-                    <a href="/login" class="text-dark">Login here</a>
-                </div>
-            </form>
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+            color: #4267B2 !important;
+        }
+
+        .form-container {
+            max-width: 500px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-register {
+            background-color: #4267B2;
+            border-color: #4267b2;
+        }
+
+        .btn-register:hover {
+            background-color: #365899;
+            border-color: #365899;
+        }
+    </style>
+
+    @extends('layouts.app')
+    @section('title', 'Register')
+    @include('navbar.nav-noauth')
+
+    @section('content')
+    {{-- CONTENT --}}
+    <div class="container">
+        <div class="form-container row">
+            <div class="col-12">
+                <!-- Addan logo or nahh uh -->
+                <h2 class="text-center mb-4">Join <b>ThriftyTrade</b></h2>
+                <form action="/register" method="POST">
+                    <div class="mb-3">
+                        <label for="fullName" class="form-label">Full Name</label>
+                        <input type="text" class="form-control" id="fullName" name="fullName" required="">
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="email" name="email" required="">
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="password" name="password" required="">
+                    </div>
+                    <div class="mb-3">
+                        <label for="confirmPassword" class="form-label">Confirm Password</label>
+                        <input type="password" class="form-control" id="confirmPassword" name="confirmPassword"
+                            required="">
+                    </div>
+                    <div class="mb-3">
+                        <label for="location" class="form-label">Location</label>
+                        <input type="text" class="form-control" id="location" name="location" required="">
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="termsAgree" required="">
+                        <label class="form-check-label" for="termsAgree">I agree to the <a href="/terms">Terms of
+                                Service</a> and <a href="/privacy">Privacy Policy</a></label>
+                    </div>
+                    <button type="submit" class="btn btn-register btn-primary w-100">Create Account</button>
+                </form>
+                <p class="text-center mt-3">Already have an account? <a href="/login">Log in</a></p>
+            </div>
         </div>
     </div>
-@endsection
+    
+    @endsection

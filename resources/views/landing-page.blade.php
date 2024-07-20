@@ -68,7 +68,7 @@
 
             <div class="container mt-4">
                 @include('components.sidebar-noauth')
-                @include('contents')
+                @include('components.contents')
 
                 <!-- CONTENT -->
                 {{-- <div class="col-lg-9">
@@ -138,12 +138,13 @@
                 <!-- END OF CONTENT -->
 
                 @include('components.howitworks')
+
             </div>
             </div>
         @endsection
 
         <script>
-            // JavaScript for enhancing user interaction
+            // test only
             document.querySelectorAll('.item-card').forEach(card => {
                 card.addEventListener('click', function() {
                     const itemTitle = this.querySelector('.item-title').textContent;

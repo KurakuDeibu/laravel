@@ -1,33 +1,78 @@
-@extends('layouts.app')
-@section('title', 'Login')
-@section('content')
-    {{-- <div class="row justify-content-center">
-        <div class="col-12 col-sm-8 col-md-6">
-            <form class="form mt-5" action="{{ route('login') }}" method="post">
-                @csrf
-                <h3 class="text-center text-dark">Login</h3>
-                <div class="form-group mt-3">
-                    <label for="email" class="text-dark">Email:</label><br>
-                    <input type="email" name="email" id="email" class="form-control">
-                    @error('email')
-                        <span class="d-block fs-6 text-danger mt-2"> {{ $message }} </span>
-                    @enderror
-                </div>
-                <div class="form-group mt-3">
-                    <label for="password" class="text-dark">Password:</label><br>
-                    <input type="password" name="password" id="password" class="form-control">
-                    @error('password')
-                        <span class="d-block fs-6 text-danger mt-2"> {{ $message }} </span>
-                    @enderror
-                </div>
-                <div class="form-group">
-                    <label for="remember-me" class="text-dark"></label><br>
-                    <input type="submit" name="submit" class="btn btn-dark btn-md" value="submit">
-                </div>
-                <div class="text-right mt-2">
-                    <a href="/register" class="text-dark">Register here</a>
-                </div>
-            </form>
-        </div>
-    </div> --}}
-@endsection
+  <style>
+      body {
+          background-color: #f8f9fa;
+          min-height: 100vh;
+          display: flex;
+          flex-direction: column;
+      }
+
+      .navbar-brand {
+          font-weight: bold;
+          color: #4267B2 !important;
+      }
+
+      .login-container {
+          flex: 1;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 2rem;
+      }
+
+      .login-form {
+          width: 100%;
+          max-width: 400px;
+          padding: 2rem;
+          background-color: white;
+          border-radius: 8px;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .btn-login {
+          background-color: #4267B2;
+          border-color: #4267B2;
+      }
+
+      .btn-login:hover {
+          background-color: #365899;
+          border-color: #365899;
+      }
+
+      .hoverlink:hover {
+          border-bottom: #365899 solid 1px;
+      }
+  </style>
+
+  @extends('layouts.app')
+  @section('title', 'Register')
+  @include('navbar.nav-noauth')
+
+  @section('content')
+
+      <div class="login-container">
+          <div class="login-form">
+              <h2 class="text-center mb-4">Log In to ThriftyTrade</h2>
+              <form action="/login" method="POST">
+                  <div class="mb-3">
+                      <label for="email" class="form-label">Email address</label>
+                      <input type="email" class="form-control" id="email" name="email" required>
+                  </div>
+                  <div class="mb-3">
+                      <label for="password" class="form-label">Password</label>
+                      <input type="password" class="form-control" id="password" name="password" required>
+                  </div>
+                  <div class="mb-3 form-check">
+                      <input type="checkbox" class="form-check-input" id="rememberMe" name="rememberMe">
+                      <label class="form-check-label" for="rememberMe">Remember me</label>
+                  </div>
+                  <button type="submit" class="btn btn-login btn-primary w-100">Log In</button>
+              </form>
+              <div class="text-center mt-3">
+                  <a href="/forgot-password">Forgot password?</a>
+              </div>
+              <hr>
+              <p class="text-center">Don't have an account? <a href="/register">Sign up</a></p>
+          </div>
+      </div>
+
+      @endsection

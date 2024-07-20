@@ -91,7 +91,7 @@
             </a>
             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <li><a class="dropdown-item" href="/profile">Profile</a></li>
-              <li><a class="dropdown-item" href="/settings">Settings</a></li>
+              <li><a class="dropdown-item" href="/profile/settings">Settings</a></li>
               <li>
                 <hr class="dropdown-divider">
               </li>
