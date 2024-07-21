@@ -22,7 +22,7 @@
   
   #logo {
     float: left;
-    width: 300px;
+    width: 12rem;
     height: 70px;
     background: url('img/thriftytrade-logo.png') left/contain no-repeat;
     transition: all 0.5s ease; /* Add transition for smooth effect */
@@ -58,13 +58,6 @@
             </li>
           </div>
 
-          <div class="hoverlink">
-            <li class="nav-item">
-              <a class="nav-link" href="/wishlists">
-                <i class="bi bi-heart"></i> Wishlists
-              </a>
-            </li>
-          </div>
         </ul>
 
         <ul class="navbar-nav">

@@ -58,19 +58,19 @@
 
     @include('navbar.nav-auth')
 
-    <div class="container mt-4">
+    <div class="container mt-3">
         <div class="row">
 
             @section('content')
-
+                @include('sweetalert::alert')
                 @include('components.sidebar')
                 @include('components.search-bar')
-
+                
                 <!-- SIDE-BAR CONTAINER-->
 
                 <!-- CONTENT -->
                 <main>
-                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 py-2">
                         <div class="col">
                             <div class="card h-100 item-card">
                                 <img src="https://placehold.co/400x400" alt="Vintage Lamp" class="card-img-top item-image">

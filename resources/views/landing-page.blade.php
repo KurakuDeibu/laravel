@@ -21,6 +21,8 @@
 
         .item-card:hover {
             transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
         }
 
         .item-image {
@@ -61,6 +63,7 @@
         @extends('layouts.app')
         @section('title', 'THRIFTYTRADE | WELCOME')
         @include('navbar.nav-noauth')
+
         @include('components.hero-section')
 
         {{-- SIDE-BAR --}}
@@ -68,6 +71,7 @@
 
             <div class="container mt-4">
                 @include('components.sidebar-noauth')
+
                 @include('components.contents')
 
                 <!-- CONTENT -->
@@ -137,10 +141,10 @@
                     </main> --}}
                 <!-- END OF CONTENT -->
 
-                @include('components.howitworks')
 
             </div>
             </div>
+            @include('components.howitworks')
         @endsection
 
         <script>

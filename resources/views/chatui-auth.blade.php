@@ -1,10 +1,10 @@
 <body>
-
     @extends('layouts.app')
+    @section('title','Chat')
     @include('navbar.nav-auth')
 
     @section('content')
-    <div class="container mt-3">
+    <div class="container mt-3 border py-2">
         <div class="row">
             <div class="col-lg-3 border-end">
                 <h2>Chats</h2>
@@ -78,7 +78,3 @@
         </div>
     </div>
     @endsection
-
-</body>
-
-</html>
